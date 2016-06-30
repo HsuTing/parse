@@ -25,10 +25,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HsuTing/parse.git"
+    "url": "git+https://github.com/HsuTing/web-parse.git"
   },
   "bugs": {
-    "url": "https://github.com/HsuTing/parse/issues"
+    "url": "https://github.com/HsuTing/web-parse/issues"
   },
-  "homepage": "https://github.com/HsuTing/parse#readme"
+  "homepage": "https://github.com/HsuTing/web-parse#readme"
 }
