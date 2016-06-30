@@ -36,4 +36,4 @@ parse({url: url}, (data) => {
 - `technews.tw`
 - `www.youtube.com`
 
-If your website is not supported or you want to get custom output, you can add `custom` in `options` like `{ custom: function(document) {} }`.
+If your website is not supported or you want to get custom output, you can add `custom` in `options` like `{ custom: (document) => {} }`.
