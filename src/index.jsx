@@ -1,16 +1,22 @@
 'use strict';
 
-import Fb from './fb/index'
+import url from 'url';
 
-export default (link, callback, error) => {
-  let output;
-  const token = link.split('|');
+import Fb from './parse/fb';
+import Technews from './parse/technews';
 
-  switch(token[0]) {
-    case 'fb':
-      output = Fb(token[1], callback, error);
+export default (options, callback, error) => {
+  if(options.url === undefined) {
+    throw new Error('"url" is needed.');
+  }
+
+  let output = {};
+  switch(url.parse(options.url).hostname) {
+    case 'www.facebook.com':
+      output = Fb(options, callback, error);
       break;
-    case 'media':
+    case 'technews.tw':
+      output = Technews(options, callback, error);
       break;
     case 'video':
       break;
