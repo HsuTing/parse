@@ -43,7 +43,7 @@ export default (options, callback, error) => {
             throw new Error('"' + url.parse(options.url).hostname + '" is not supported.');
           }
 
-          options.custom(options, window.document, callback);
+          options.custom(options, window, callback);
           break;
       }
     }
